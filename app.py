@@ -5,16 +5,15 @@ with open("model.pkl","rb") as f:
     model = pkl.load(f)
 st.title("Marks Analyzer")
 st.header("Know own marks with one click✅")
-st.write("marks are just a marks, not a certificate of your wisdom")
+st.write("marks are just a marks, not a certificate of your wisdom🧠")
 st.set_page_config(
     page_title= "Marks Analyzer",
     page_icon= "icon.png"
 )
-hrs = st.number_input("Enter your number of hours")
-bt = st.button("Click here")
+hrs = st.number_input("Enter your number of hours that you studied📖")
+bt = st.button("Click here to check marks.👆")
 op = model.predict([[hrs]])[0]
 print(op)
-# op = str(op)
 if bt:
     if hrs<0:
         st.error("You cannot study in negative hrs")
