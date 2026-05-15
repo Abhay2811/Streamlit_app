@@ -20,11 +20,11 @@ if bt:
     elif 0< hrs <= 9.5:
         if op < 33:
             op = str(op)
-            st.warning(f"you are fail with {op[:5]} marks.")
+            st.warning(f"you are failed with {op[:5]} marks.")
 
             op = str(op)
-            st.info(f"you are pass with {op[:5]} marks.")
+            st.info(f"you are passed with {op[:5]} marks.")
     elif hrs>24:
-        st.error("enter hours less than 24hrs")
+        st.error("Please enter valid hours(less than 24hrs).")
     else:
-        st.success("Congratulations! you will get: 100 marks.") 
+        st.success("Congratulations! you will get 100 marks.") 
